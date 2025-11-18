@@ -12,8 +12,12 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">Grow plants. Grow happiness.</h1>
             <p className="mt-4 text-lg text-emerald-800/90">A gentle social platform where people share plant progress, support each other, and build real happiness through nature.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/community" className="rounded-full bg-emerald-600 text-white px-6 py-3 shadow hover:bg-emerald-700">Join the Community</Link>
-              <Link to="/shop" className="rounded-full bg-white text-emerald-800 px-6 py-3 border border-emerald-200 hover:bg-emerald-50">Start Your Cutty Kit</Link>
+              <Link to="/community" className="rounded-full bg-emerald-600 text-white px-6 py-3 shadow hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer" aria-label="Join the Community">
+                Join the Community
+              </Link>
+              <Link to="/shop" className="rounded-full bg-white text-emerald-800 px-6 py-3 border border-emerald-200 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer" aria-label="Start Your Cutty Kit">
+                Start Your Cutty Kit
+              </Link>
             </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
               {[
@@ -27,7 +31,8 @@ export default function Home() {
                 <Link
                   key={i}
                   to={c.to}
-                  className="flex items-center gap-2 rounded-xl bg-white/80 border border-emerald-100 px-3 py-2 hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors"
+                  className="flex items-center gap-2 rounded-xl bg-white/80 border border-emerald-100 px-3 py-2 hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer"
+                  aria-label={c.label}
                 >
                   <span className="text-emerald-600">{c.icon}</span>
                   <span>{c.label}</span>
@@ -72,7 +77,8 @@ export default function Home() {
               <Link
                 key={i}
                 to={s.to}
-                className="rounded-2xl border border-emerald-100 p-6 bg-emerald-50/40 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors block"
+                className="rounded-2xl border border-emerald-100 p-6 bg-emerald-50/40 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all block cursor-pointer hover:shadow-sm hover:-translate-y-0.5"
+                aria-label={s.title}
               >
                 <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">{i + 1}</div>
                 <p className="font-semibold">{s.title}</p>
@@ -92,8 +98,8 @@ export default function Home() {
               <p className="mt-2 text-white/90">Join a safe, uplifting community and grow something beautiful together.</p>
             </div>
             <div className="flex gap-3 md:justify-end">
-              <Link to="/community" className="rounded-full bg-white text-emerald-700 px-6 py-3 font-medium">Join Community</Link>
-              <Link to="/shop" className="rounded-full bg-emerald-700/30 text-white border border-white/40 px-6 py-3">Get the Kit</Link>
+              <Link to="/community" className="rounded-full bg-white text-emerald-700 px-6 py-3 font-medium focus:outline-none focus:ring-2 focus:ring-white/60 cursor-pointer">Join Community</Link>
+              <Link to="/shop" className="rounded-full bg-emerald-700/30 text-white border border-white/40 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-white/60 cursor-pointer">Get the Kit</Link>
             </div>
           </div>
         </div>

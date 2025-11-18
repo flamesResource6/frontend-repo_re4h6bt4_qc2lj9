@@ -11,16 +11,16 @@ const demoFeed = [
   {
     id: 101,
     user: demoProfiles[0],
-    photo: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop',
+    photo: 'https://img.freepik.com/premium-photo/first-sprouts-tomatoes_528985-2176.jpg',
     caption: 'First sprout today! Tiny but mighty 🌱',
     hashtags: ['SpringStart', 'FirstSprout']
   },
   {
     id: 102,
     user: demoProfiles[1],
-    photo: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop',
-    caption: 'Repotted and added support stakes. Feeling hopeful!',
-    hashtags: ['Growing', 'Dahlia']
+    photo: 'https://th.bing.com/th/id/OIP.2RNxbeAYE4MjSiiGuxHPxgHaE7?w=278&h=185&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3',
+    caption: 'Day 12: A Tiny New Leaf Appeared!\n\nToday I noticed a little new leaf on my Cutty, and it honestly made my whole morning. It’s such a small change, but seeing it reminds me that slow growth is still growth. Taking a moment to water it and check on the soil felt really calming today. 🌱\n\nHas anyone else seen new leaves this week? I’d love to hear how your Cuttys are doing!',
+    hashtags: ['Day12', 'NewLeaf', 'SlowGrowth']
   },
 ]
 
@@ -63,16 +63,16 @@ export default function Community() {
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           {demoFeed.map((post) => (
             <article key={post.id} className="rounded-3xl overflow-hidden bg-white border border-emerald-100">
-              <img src={post.photo} alt="plant post" className="w-full h-64 object-cover" />
+              <img src={post.photo} alt="community post" className="w-full h-64 object-cover" />
               <div className="p-5">
                 <div className="flex items-center gap-3">
-                  <img src={post.user.avatar} className="w-10 h-10 rounded-full object-cover" />
+                  <img src={post.user.avatar} alt={post.user.name} className="w-10 h-10 rounded-full object-cover" />
                   <div>
                     <p className="font-medium text-emerald-900">{post.user.name}</p>
                     <p className="text-xs text-emerald-700/80">{post.user.bio}</p>
                   </div>
                 </div>
-                <p className="mt-3 text-emerald-900">{post.caption}</p>
+                <p className="mt-3 whitespace-pre-wrap text-emerald-900">{post.caption}</p>
                 <div className="mt-2 flex gap-2 text-xs text-emerald-700/90">
                   {post.hashtags.map((h) => (
                     <span key={h} className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-1 border border-emerald-100"><Hash className="w-3 h-3"/>#{h}</span>
