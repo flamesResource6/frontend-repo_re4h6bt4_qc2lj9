@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Sprout, Heart, Users, BookOpen, Calendar, ShoppingBag } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -18,26 +17,6 @@ export default function Home() {
               <Link to="/shop" className="rounded-full bg-white text-emerald-800 px-6 py-3 border border-emerald-200 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer" aria-label="Start Your Cutty Kit">
                 Start Your Cutty Kit
               </Link>
-            </div>
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-              {[
-                { icon: <Users className='w-4 h-4' />, label: 'Community Feed', to: '/community' },
-                { icon: <Sprout className='w-4 h-4' />, label: 'How it Works', to: '/how-it-works' },
-                { icon: <BookOpen className='w-4 h-4' />, label: 'Learn & Science', to: '/learn' },
-                { icon: <Calendar className='w-4 h-4' />, label: 'Events', to: '/events' },
-                { icon: <ShoppingBag className='w-4 h-4' />, label: 'Shop', to: '/shop' },
-                { icon: <Heart className='w-4 h-4' />, label: 'Well-being', to: '/about' },
-              ].map((c, i) => (
-                <Link
-                  key={i}
-                  to={c.to}
-                  className="flex items-center gap-2 rounded-xl bg-white/80 border border-emerald-100 px-3 py-2 hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer"
-                  aria-label={c.label}
-                >
-                  <span className="text-emerald-600">{c.icon}</span>
-                  <span>{c.label}</span>
-                </Link>
-              ))}
             </div>
           </div>
           <div>
