@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Sprout, MessageCircle, Hashtag, Heart, Leaf } from 'lucide-react'
+import { Sprout, MessageCircle, Hash, Heart, Leaf } from 'lucide-react'
 
 const demoProfiles = [
   { id: 1, name: 'Ava', bio: 'Dahlia dreamer • tea lover', stage: 'Seedling', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop' },
@@ -75,7 +75,7 @@ export default function Community() {
                 <p className="mt-3 text-emerald-900">{post.caption}</p>
                 <div className="mt-2 flex gap-2 text-xs text-emerald-700/90">
                   {post.hashtags.map((h) => (
-                    <span key={h} className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-1 border border-emerald-100"><Hashtag className="w-3 h-3"/>#{h}</span>
+                    <span key={h} className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-1 border border-emerald-100"><Hash className="w-3 h-3"/>#{h}</span>
                   ))}
                 </div>
                 <div className="mt-4 flex items-center gap-3">

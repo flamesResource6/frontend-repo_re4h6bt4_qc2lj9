@@ -17,23 +17,31 @@ export default function Home() {
             </div>
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
               {[
-                { icon: <Users className='w-4 h-4' />, label: 'Community Feed' },
-                { icon: <Sprout className='w-4 h-4' />, label: 'How it Works' },
-                { icon: <BookOpen className='w-4 h-4' />, label: 'Learn & Science' },
-                { icon: <Calendar className='w-4 h-4' />, label: 'Events' },
-                { icon: <ShoppingBag className='w-4 h-4' />, label: 'Shop' },
-                { icon: <Heart className='w-4 h-4' />, label: 'Well-being' },
+                { icon: <Users className='w-4 h-4' />, label: 'Community Feed', to: '/community' },
+                { icon: <Sprout className='w-4 h-4' />, label: 'How it Works', to: '/how-it-works' },
+                { icon: <BookOpen className='w-4 h-4' />, label: 'Learn & Science', to: '/learn' },
+                { icon: <Calendar className='w-4 h-4' />, label: 'Events', to: '/events' },
+                { icon: <ShoppingBag className='w-4 h-4' />, label: 'Shop', to: '/shop' },
+                { icon: <Heart className='w-4 h-4' />, label: 'Well-being', to: '/about' },
               ].map((c, i) => (
-                <div key={i} className="flex items-center gap-2 rounded-xl bg-white/80 border border-emerald-100 px-3 py-2">
+                <Link
+                  key={i}
+                  to={c.to}
+                  className="flex items-center gap-2 rounded-xl bg-white/80 border border-emerald-100 px-3 py-2 hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors"
+                >
                   <span className="text-emerald-600">{c.icon}</span>
                   <span>{c.label}</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
           <div>
             <div className="aspect-[4/3] rounded-3xl bg-white shadow-lg border border-emerald-100 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?q=80&w=1600&auto=format&fit=crop" alt="Happy people gardening" className="w-full h-full object-cover" />
+              <img 
+                src="https://media.discordapp.net/attachments/692077531272052768/1440123736064917534/image0.jpg?ex=691dabfe&is=691c5a7e&hm=6fc8885ec508c053a319411971290ce5222535311a6002d43b159addb44a75e6&=&format=webp&width=928&height=930" 
+                alt="Cutty Box kit"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -48,21 +56,28 @@ export default function Home() {
               {
                 title: 'Get your Cutty Box',
                 desc: 'DIY plant kit with dahlia cutting, soil, pot, fertilizer, and mini greenhouse.',
+                to: '/shop',
               },
               {
                 title: 'Grow at your own pace',
                 desc: 'Easy, guided growth with reminders and simple instructions.',
+                to: '/how-it-works',
               },
               {
                 title: 'Share your journey',
                 desc: 'Post photos, celebrate milestones, and connect with others.',
+                to: '/community',
               },
             ].map((s, i) => (
-              <div key={i} className="rounded-2xl border border-emerald-100 p-6 bg-emerald-50/40">
+              <Link
+                key={i}
+                to={s.to}
+                className="rounded-2xl border border-emerald-100 p-6 bg-emerald-50/40 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors block"
+              >
                 <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">{i + 1}</div>
                 <p className="font-semibold">{s.title}</p>
                 <p className="text-emerald-700/90 mt-2 text-sm">{s.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
