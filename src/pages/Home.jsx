@@ -5,24 +5,32 @@ export default function Home() {
     <div className="bg-emerald-50 min-h-screen text-emerald-900">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.12),transparent_60%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.12),transparent_60%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">Grow plants. Grow happiness.</h1>
             <p className="mt-4 text-lg text-emerald-800/90">A gentle social platform where people share plant progress, support each other, and build real happiness through nature.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/community" className="rounded-full bg-emerald-600 text-white px-6 py-3 shadow hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer" aria-label="Join the Community">
+              <Link
+                to="/community"
+                className="rounded-full bg-emerald-600 text-white px-5 py-2.5 text-sm sm:text-base shadow hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer"
+                aria-label="Join the Community"
+              >
                 Join the Community
               </Link>
-              <Link to="/shop" className="rounded-full bg-white text-emerald-800 px-6 py-3 border border-emerald-200 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer" aria-label="Start Your Cutty Kit">
+              <Link
+                to="/shop"
+                className="rounded-full bg-white text-emerald-800 px-5 py-2.5 text-sm sm:text-base border border-emerald-200 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-colors cursor-pointer"
+                aria-label="Start Your Cutty Kit"
+              >
                 Start Your Cutty Kit
               </Link>
             </div>
           </div>
           <div>
             <div className="aspect-[4/3] rounded-3xl bg-white shadow-lg border border-emerald-100 overflow-hidden">
-              <img 
-                src="https://media.discordapp.net/attachments/692077531272052768/1440123736064917534/image0.jpg?ex=691dabfe&is=691c5a7e&hm=6fc8885ec508c053a319411971290ce5222535311a6002d43b159addb44a75e6&=&format=webp&width=928&height=930" 
+              <img
+                src="https://media.discordapp.net/attachments/692077531272052768/1440123736064917534/image0.jpg?ex=691dabfe&is=691c5a7e&hm=6fc8885ec508c053a319411971290ce5222535311a6002d43b159addb44a75e6&=&format=webp&width=928&height=930"
                 alt="Cutty Box kit"
                 className="w-full h-full object-cover"
               />

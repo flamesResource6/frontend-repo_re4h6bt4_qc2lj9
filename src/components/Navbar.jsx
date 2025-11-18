@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { Leaf, ShoppingBag, Sprout, Users, BookOpen, Calendar, Info, Mail } from 'lucide-react'
+import { Leaf, ShoppingBag, Users } from 'lucide-react'
 
 const navItems = [
   { to: '/', label: 'Home' },
@@ -7,7 +7,7 @@ const navItems = [
   { to: '/community', label: 'Community' },
   { to: '/learn', label: 'Learn' },
   { to: '/events', label: 'Events' },
-  { to: '/shop', label: 'Shop' },
+  // Removed duplicate Shop from middle nav to avoid repetition
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link to="/community" className="inline-flex items-center gap-2 rounded-full bg-emerald-600 text-white px-4 py-2 text-sm shadow-sm hover:bg-emerald-700 transition-colors">
             <Users className="w-4 h-4" /> Join Community
           </Link>
-          <Link to="/shop" className="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-4 py-2 text-sm hover:bg-emerald-100 border border-emerald-100">
+          <Link to="/shop" className="inline-flex items-center gap-2 rounded-full bg-emerald-600 text-white px-4 py-2 text-sm shadow-sm hover:bg-emerald-700 transition-colors">
             <ShoppingBag className="w-4 h-4" /> Shop
           </Link>
         </div>
@@ -65,7 +65,7 @@ export default function Navbar() {
                 <Link to="/community" className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 text-white px-3 py-2 text-sm">
                   <Users className="w-4 h-4" /> Join
                 </Link>
-                <Link to="/shop" className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-50 text-emerald-700 px-3 py-2 text-sm border border-emerald-100">
+                <Link to="/shop" className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 text-white px-3 py-2 text-sm">
                   <ShoppingBag className="w-4 h-4" /> Shop
                 </Link>
               </div>
